@@ -1,0 +1,136 @@
+<!--
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+ </head>
+ <body>
+ 
+<h1>image upload example</h1>
+  <form method="POST" class="post-form" enctype="multipart/form-data" novalidate>
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" class="save btn btn-default" value=""upload">Mozaik Convert</button>         # 업로드 버튼
+  </form>
+ 
+{% if uploaded_file_url %}
+  <img src="{{ uploaded_file_url }}">
+  <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>              # 업로드 이미지를 html에 보여줌
+  {% endif %}
+ 
+<p><a href="{% url 'uimage' %}">Return to home</a></p>
+
+</body>
+</html>
+
+-->
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Mosaic Convert - image</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="{% static 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i' %}" rel="stylesheet">
+  <link href="{% static 'https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i' %}" rel="stylesheet">
+  <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/coming-soon.min.css' %}" rel="stylesheet">
+  <link href="{% static 'css/icono.min.css' %}" rel="stylesheet" >
+
+  <style>
+    .image {
+      -webkit-animation:spin 4s linear infinite;
+      -moz-animation:spin 4s linear infinite;
+      animation:spin 4s linear infinite;
+    }
+    @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+    @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+    @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="overlay"></div>
+  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+    <source src="{% static 'mp4/bg.mp4' %}" type="video/mp4">
+  </video>
+
+  <div class="masthead">
+    <div class="masthead-bg"></div>
+    <div class="container h-100">
+        <div class="col-12 my-auto">
+          <div class="masthead-content text-white px-5 px-md-0">
+            <h1 class="mb-3">Convert Image!</h1>
+              <form method="POST" class="post-form" enctype="multipart/form-data" novalidate>
+              {% csrf_token %}
+              {{ form.as_p }}
+              <button type="submit" class="save btn btn-danger" value="upload">
+                <div class="image" >
+                  <i class = "icono-sync"></i>
+                </div>
+              </button>
+              </form>     
+            {% if result_url %}
+              <img src="{{ result_url }}" style="max-width: 100%; height: auto;">
+              <p>
+                <a href="{{ result_url }}" download>
+                    <img class="btn-img" src="{% static 'img/download_icon.png' %}">
+                </a>
+                <a href="{% url 'post_list' %}">
+                  <img class="btn-img" src="{% static 'img/home_icon.png' %}">
+                </a>
+              </p>
+              {% endif %}          
+            <p></p>
+          </div>
+        </div>
+    </div>
+  </div>
+
+
+  <div class="social-icons">
+    <ul class="list-unstyled text-center mb-0">
+      <li class="list-unstyled-item">
+        <a href="#">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+      <li class="list-unstyled-item">
+        <a href="#">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+      <li class="list-unstyled-item">
+        <a href="#">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="{% static 'js/coming-soon.min.js' %}"></script>
+
+</body>
+
+</html>
