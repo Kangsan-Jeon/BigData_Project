@@ -10,7 +10,7 @@ We trained face and license plate images with [YOLO-v3](https://pjreddie.com/dar
 
 ## Getting Started
 
-Our weight can download on [here](https://drive.google.com/open?id=1WWZZ-rciDmJCv4CBwOaFD4l-ZMVb85ZF)
+Our weight was uploaded on [here](https://drive.google.com/open?id=1WWZZ-rciDmJCv4CBwOaFD4l-ZMVb85ZF)
 
 1. Run the server in your project directory
 
