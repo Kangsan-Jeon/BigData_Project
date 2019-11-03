@@ -1,5 +1,4 @@
 # BigData_Project: Blur faces and license plates using deep-learning
-Complete YOLO v3 TensorFlow implementation. Support training on your own dataset.
 
 This project is worked with 서수진, 원동호, 이민지, 전여진
 
@@ -17,16 +16,17 @@ $ python3 manage.py runserver
 ```
 
 2. Activate server using ngrok on other terminal
+   * Copy the address of 'Fowarding' row on terminal after execute below code (ex. d61b0f6fngrok.io)
 
 ```
-$ ./ngrok http [port number](maybe 8000)
+$ ./ngrok http [port number] (maybe 8000)
 ```
-   
-3. Copy the address of 'Fowarding' row (ex. d61b0f6fngrok.io)
-   * Modify setting.py in FirstProject directory
+
+3. Modify setting.py in FirstProject directory
    * Paste the address to ALLOWED_HOSTS in 28th row
  
-4. Open the address on your browser
+4. Blur a image
+   * Open the address on your browser
    * If you want blur the image, click ![image_icon](./blog/static/img/image_icon.png) icon
    * After click "파일선택" button, select the image to blur
    * Click convert button
