@@ -7,7 +7,7 @@ opencv-python_4.1.0.25 and ngrok_2.3.34) with GTX-1050ti.
 
 ## Getting Started
 
-Our weight can download on [here]()
+Our weight can download on [here](https://drive.google.com/open?id=1WWZZ-rciDmJCv4CBwOaFD4l-ZMVb85ZF)
 
 1. Run the server in your project directory
 
