@@ -1,4 +1,4 @@
-# BigData_Project(Blur faces and license plates using deep-learning)
+# BigData_Project: Blur faces and license plates using deep-learning
 Complete YOLO v3 TensorFlow implementation. Support training on your own dataset.
 
 This project is worked with 서수진, 원동호, 이민지, 전여진
