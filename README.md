@@ -38,3 +38,4 @@ $ ./ngrok http [port number] (maybe 8000)
    * If you want to download blured image, click ![download_icon](./blog/static/img/download_icon.png) icon
    * If you want to go home, click ![home_icon](./blog/static/img/home_icon.png) icon
    * We don't produce to blur the **video**
+   * If any path(in code) is written by uni-code, it doesn't work because of open-cv
