@@ -37,5 +37,5 @@ $ ./ngrok http [port number] (maybe 8000)
    * Click convert button
    * If you want to download blured image, click ![download_icon](./blog/static/img/download_icon.png) icon
    * If you want to go home, click ![home_icon](./blog/static/img/home_icon.png) icon
-   * We don't produce to blur the **video**
+   * We don't produce to blur the **video** on the web. If you want to blur the video, you must execute video_mosaik.py on your computer not our web
    * If any path(in code) is written by uni-code, it doesn't work because of open-cv
