@@ -11,6 +11,7 @@ We trained face and license plate images with [YOLO-v3](https://pjreddie.com/dar
 ## Getting Started
 
 Our weight was uploaded on [here](https://drive.google.com/open?id=1WWZZ-rciDmJCv4CBwOaFD4l-ZMVb85ZF)
+You must move weight file to "./YOLOv3_TensorFlow/checkpoint" and modify restore_path argument of test_single_image.py at 43th row
 
 1. Run the server in your project directory
 
@@ -26,7 +27,7 @@ $ ./ngrok http [port number] (maybe 8000)
 ```
 
 3. Modify setting.py in FirstProject directory
-   * Paste the address to ALLOWED_HOSTS in 28th row
+   * Paste the address to ALLOWED_HOSTS at 28th row
  
 4. Blur a image
    * Open the address on your browser
